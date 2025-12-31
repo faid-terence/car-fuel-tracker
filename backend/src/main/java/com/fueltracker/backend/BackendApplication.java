@@ -11,6 +11,5 @@ public class BackendApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(BackendApplication.class, args);
-        System.out.println("Backend server is running on http://localhost:8080");
     }
 }

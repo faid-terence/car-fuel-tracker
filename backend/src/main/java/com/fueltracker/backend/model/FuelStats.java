@@ -5,9 +5,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-/**
- * Represents fuel statistics for a car.
- */
 @Getter
 @Setter
 @NoArgsConstructor

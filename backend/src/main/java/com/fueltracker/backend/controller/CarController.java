@@ -28,7 +28,6 @@ public class CarController {
 
     /**
      * Creates a new car.
-     * POST /api/cars
      */
     @PostMapping
     public ResponseEntity<Car> createCar(@RequestBody @Valid CreateCarRequest request) {
@@ -38,7 +37,6 @@ public class CarController {
 
     /**
      * Lists all cars.
-     * GET /api/cars
      */
     @GetMapping
     public ResponseEntity<List<Car>> getAllCars() {
@@ -48,7 +46,6 @@ public class CarController {
 
     /**
      * Adds a fuel entry to a specific car.
-     * POST /api/cars/{id}/fuel
      */
     @PostMapping("/{id}/fuel")
     public ResponseEntity<FuelEntry> addFuelEntry(
@@ -61,7 +58,6 @@ public class CarController {
 
     /**
      * Gets fuel statistics for a specific car.
-     * GET /api/cars/{id}/fuel/stats
      */
     @GetMapping("/{id}/fuel/stats")
     public ResponseEntity<FuelStats> getFuelStats(@PathVariable Long id) {

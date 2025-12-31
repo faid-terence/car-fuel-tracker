@@ -1,16 +1,15 @@
-package com.fueltracker.backend.model;
+package com.fueltracker.cli.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class FuelEntry {
+public class AddFuelRequest {
     private Double liters;
     private Double price;
     private Integer odometer;

@@ -12,7 +12,7 @@ import java.util.*;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
- * Service layer for managing cars and fuel entries.
+ * Service for managing cars and fuel entries.
  */
 @Service
 @RequiredArgsConstructor
@@ -77,7 +77,6 @@ public class CarService {
             totalCost += entry.getPrice();
         }
 
-        // Calculate average consumption per 100km
         double averageConsumption = calculateAverageConsumption(entries);
 
         return new FuelStats(totalFuel, totalCost, averageConsumption);
@@ -85,14 +84,12 @@ public class CarService {
 
     /**
      * Calculates average fuel consumption per 100km.
-     * Uses the difference between first and last odometer readings.
      */
     private double calculateAverageConsumption(List<FuelEntry> entries) {
         if (entries.size() < 2) {
             return 0.0;
         }
-
-        // Sort by odometer to get first and last readings
+        
         List<FuelEntry> sorted = new ArrayList<>(entries);
         sorted.sort(Comparator.comparingInt(FuelEntry::getOdometer));
 
@@ -108,7 +105,6 @@ public class CarService {
                 .mapToDouble(FuelEntry::getLiters)
                 .sum();
 
-        // Convert to L/100km
         return (totalFuel / totalDistance) * 100;
     }
 }

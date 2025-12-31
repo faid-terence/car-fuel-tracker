@@ -22,7 +22,6 @@ public class ArgParser {
     public static void validateRequiredParams(Map<String, String> params, String... requiredKeys) throws IllegalArgumentException {
         for (String key : requiredKeys) {
             if (!params.containsKey(key) || params.get(key) == null) {
-                // Construct a nice message
                 StringBuilder sb = new StringBuilder("Missing required parameters: ");
                 for (String k : requiredKeys) {
                     sb.append("--").append(k).append(" ");

@@ -72,7 +72,6 @@ public class HttpRestClient {
                 System.err.println("Error details: " + errorResponse.toString());
             }
         } catch (Exception e) {
-            // Ignore error reading error stream
         }
     }
 }

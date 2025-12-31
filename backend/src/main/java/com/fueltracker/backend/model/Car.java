@@ -8,9 +8,7 @@ import lombok.Setter;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Represents a car in the fuel tracking system.
- */
+
 @Getter
 @Setter
 @NoArgsConstructor
