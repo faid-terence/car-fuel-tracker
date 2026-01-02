@@ -65,7 +65,7 @@ curl http://localhost:8084/api/cars/1/fuel/stats
 ```
 
 ### Raw Servlet Access
-The application also exposes a raw Servlet endpoint to list cars:
+The application also exposes a raw Servlet endpoint to view car fuels stats:
 
 ```bash
 curl "http://localhost:8084/servlet/fuel-stats?carId=1"
