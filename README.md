@@ -25,7 +25,8 @@ Open a new terminal window and use the provided helper script:
 
 ```bash
 # Create a car
-./fuel-cli.sh create-car --brand Toyota --model Corolla --year 2020
+./fuel-cli.sh create-car --brand BYD --model Atto-3 --year 2025
+
 
 # Add fuel - Use the ID returned from create-car
 ./fuel-cli.sh add-fuel --carId 1 --liters 45.5 --price 1.50 --odometer 10500
